@@ -10,7 +10,7 @@ const PostDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPost(data));
-  }, []);
+  }, [id]);
 
   const [comments, setComments] = useState([]);
   console.log(comments);
@@ -19,7 +19,7 @@ const PostDetails = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setComments(data));
-  }, []);
+  }, [id]);
   return (
     <div>
       <h2>This is post details: </h2>
